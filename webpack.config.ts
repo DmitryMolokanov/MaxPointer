@@ -12,7 +12,7 @@ const paths: BuildPaths = {
 const PORT = 3000;
 
 const config: webpack.Configuration = buildWebpackConfig({
-  mode: "development",
+  mode: "production",
   paths,
   port: PORT,
 });
