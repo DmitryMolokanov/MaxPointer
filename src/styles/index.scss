@@ -1,7 +1,29 @@
-@import "./reset.scss";
-@import "./variables/global.scss";
-@import "./themes/dark.scss";
-@import "./themes/normal.scss";
+%point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(50, 50, 50);
+}
+
+.point {
+  @extend %point;
+}
+
+.point_animation {
+  @extend %point;
+  animation: point-blink 0.25s infinite alternate ease;
+}
 
 .app {
   font-size: font-m;
@@ -10,4 +32,13 @@
   color: var(--primary-color);
 
   min-height: 100vh;
+}
+
+@keyframes point-blink {
+  from {
+    box-shadow: 0;
+  }
+  to {
+    box-shadow: 0px 0px 15px 10px rgb(255, 227, 68);
+  }
 }
