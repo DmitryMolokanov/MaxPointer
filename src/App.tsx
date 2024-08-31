@@ -25,8 +25,17 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => newPosition(), 500);
     if (isPoint) {
-      setLeft(Math.floor(Math.random() * 100) + "%");
-      setTop(Math.floor(Math.random() * 100) + "%");
+      let top = Math.floor(Math.random() * 100);
+      top < 10 ? (top = 10) : top;
+      top > 90 ? (top = 90) : top;
+
+      let left = Math.floor(Math.random() * 100);
+      left < 10 ? (left = 10) : left;
+      left > 90 ? (left = 90) : left;
+
+      setTop(top + "%");
+      setLeft(left + "%");
+      console.log(top, left);
       setPointClass("point");
     }
   }, [isPoint]);

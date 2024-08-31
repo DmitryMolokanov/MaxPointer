@@ -1,0 +1,14 @@
+{
+  "name": "Max game",
+  "short_name": "Max game",
+  "icons": [
+    {
+      "src": "baby.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "fullscreen",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
